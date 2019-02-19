@@ -1,0 +1,6 @@
+C:\Repos\Tradesoft_Problem_151\TP151_Repository\bin\Release\TP151_Repository.dll.config
+C:\Repos\Tradesoft_Problem_151\TP151_Repository\bin\Release\TP151_Repository.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Repository\bin\Release\TP151_Repository.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_Repository\obj\Release\TP151_Repository.csprojResolveAssemblyReference.cache
+C:\Repos\Tradesoft_Problem_151\TP151_Repository\obj\Release\TP151_Repository.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Repository\obj\Release\TP151_Repository.pdb

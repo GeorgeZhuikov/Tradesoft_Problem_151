@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92F8D541-7148-42D6-A81F-019A80A7F5BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tradesoft_Problem_151</RootNamespace>
+    <AssemblyName>Tradesoft_Problem_151</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCreateDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCreateDB.Designer.cs">
+      <DependentUpon>FCreateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCreateUpdateGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCreateUpdateGoods.Designer.cs">
+      <DependentUpon>FCreateUpdateGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCreateUpdateProduer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCreateUpdateProduer.Designer.cs">
+      <DependentUpon>FCreateUpdateProduer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FFindLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FFindLink.Designer.cs">
+      <DependentUpon>FFindLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FProducers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FProducers.Designer.cs">
+      <DependentUpon>FProducers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FShowLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FShowLinks.Designer.cs">
+      <DependentUpon>FShowLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCs\UCCreateDataBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCCreateDataBase.Designer.cs">
+      <DependentUpon>UCCreateDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCCreateUpdateGoods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCCreateUpdateGoods.Designer.cs">
+      <DependentUpon>UCCreateUpdateGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCCreateUpdateProducer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCCreateUpdateProducer.Designer.cs">
+      <DependentUpon>UCCreateUpdateProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCCUGAnalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCCUGAnalog.Designer.cs">
+      <DependentUpon>UCCUGAnalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCFindLink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCFindLink.Designer.cs">
+      <DependentUpon>UCFindLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCList.Designer.cs">
+      <DependentUpon>UCList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\UCShowLinks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\UCShowLinks.Designer.cs">
+      <DependentUpon>UCShowLinks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCreateDB.resx">
+      <DependentUpon>FCreateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCreateUpdateGoods.resx">
+      <DependentUpon>FCreateUpdateGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCreateUpdateProduer.resx">
+      <DependentUpon>FCreateUpdateProduer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FFindLink.resx">
+      <DependentUpon>FFindLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FProducers.resx">
+      <DependentUpon>FProducers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FShowLinks.resx">
+      <DependentUpon>FShowLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UCs\UCCreateDataBase.resx">
+      <DependentUpon>UCCreateDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UCCreateUpdateGoods.resx">
+      <DependentUpon>UCCreateUpdateGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UCCreateUpdateProducer.resx">
+      <DependentUpon>UCCreateUpdateProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UCCUGAnalog.resx">
+      <DependentUpon>UCCUGAnalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UCFindLink.resx">
+      <DependentUpon>UCFindLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UCList.resx">
+      <DependentUpon>UCList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\UCShowLinks.resx">
+      <DependentUpon>UCShowLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TP151_API\TP151_API.csproj">
+      <Project>{b9a234cb-a969-4b82-9384-9817d7c4d93f}</Project>
+      <Name>TP151_API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TP151_Repository\TP151_Repository.csproj">
+      <Project>{dc244ad6-6616-4941-9c6c-70b632037d08}</Project>
+      <Name>TP151_Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

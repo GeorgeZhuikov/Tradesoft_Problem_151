@@ -1,0 +1,11 @@
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\TP151_Tests.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\TP151_Tests.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\TP151_API.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\TP151_Repository.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\TP151_API.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\TP151_Repository.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\obj\Debug\TP151_Tests.csprojResolveAssemblyReference.cache
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\obj\Debug\TP151_Tests.dll
+C:\Repos\Tradesoft_Problem_151\TP151_Tests\obj\Debug\TP151_Tests.pdb

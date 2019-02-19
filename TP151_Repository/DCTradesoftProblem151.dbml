@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TradesoftProblem151" Class="DCTradesoftProblem151DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=GEORGEMAIN;Initial Catalog=TradesoftProblem151;Integrated Security=True" SettingsObjectName="TP151_Repository.Properties.Settings" SettingsPropertyName="TradesoftProblem151ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Producers" Member="Producers">
+    <Type Name="Producer">
+      <Column Name="Name" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Goods" Member="Goods">
+    <Type Name="Good">
+      <Column Name="VendorCode" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="ProducerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Analogs" Member="Analogs">
+    <Type Name="Analog">
+      <Column Name="OriginalGoodslD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnalogGoodsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reliance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

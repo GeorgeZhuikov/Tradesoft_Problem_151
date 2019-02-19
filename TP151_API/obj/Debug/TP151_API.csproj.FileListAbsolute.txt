@@ -1,0 +1,9 @@
+C:\Repos\Tradesoft_Problem_151\TP151_API\bin\Debug\TP151_API.dll
+C:\Repos\Tradesoft_Problem_151\TP151_API\bin\Debug\TP151_API.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_API\obj\Debug\TP151_API.csprojResolveAssemblyReference.cache
+C:\Repos\Tradesoft_Problem_151\TP151_API\obj\Debug\TP151_API.dll
+C:\Repos\Tradesoft_Problem_151\TP151_API\obj\Debug\TP151_API.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_API\bin\Debug\TP151_Repository.dll
+C:\Repos\Tradesoft_Problem_151\TP151_API\bin\Debug\TP151_Repository.pdb
+C:\Repos\Tradesoft_Problem_151\TP151_API\obj\Debug\TP151_API.Properties.Resources.resources
+C:\Repos\Tradesoft_Problem_151\TP151_API\obj\Debug\TP151_API.csproj.GenerateResource.Cache
