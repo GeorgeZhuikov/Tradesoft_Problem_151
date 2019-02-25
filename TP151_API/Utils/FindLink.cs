@@ -185,6 +185,9 @@ namespace TP151_API.Utils
                 goodsID = current.OriginalGoodslD;
             }
             _links.Reverse(); //переворачиваем список обратно
+            int index = 1;
+            foreach (var link in _links)
+                link.Route = string.Format("маршрут {0}", index++);
         }
 
         private LinkData GetLinkData(Analog analog, int step)
