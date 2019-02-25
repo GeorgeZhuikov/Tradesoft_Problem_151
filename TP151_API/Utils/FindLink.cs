@@ -15,9 +15,9 @@ namespace TP151_API.Utils
         private List<FindIteration> _fis; //информация о циклах поиска
         private List<LinkData> _links; //информация о маршрутах и их содержимого
         private Good _originalGoods, _toFindGoods; //имходный и искомый товары
-        private Producer _originalProducer, _toFindProducer; //имходный и искомый производители
         private List<Good> _goodsList; //список товаров
         private List<Producer> _producerList; //список производителей
+        private List<Analog> _analogsList; //список аналогов
         private string _errorMessage; //сообзение об ощибке
 
         public string ErrorMessage
@@ -80,8 +80,28 @@ namespace TP151_API.Utils
             return goods;
         }
 
+        private void FillAnalogsList()
+        {//заполняем список аналогов
+            _analogsList = Repository.Analogs.ToList();
+            if (_analogsList.Count > 0)
+            {
+                int index = _analogsList.Last().ID;
+                List<Analog> analogs = new List<Analog>();
+                foreach (var analog in _analogsList) //B = A
+                    analogs.Add(new Analog()
+                    {
+                        OriginalGoodslD = analog.AnalogGoodsID,
+                        AnalogGoodsID = analog.OriginalGoodslD,
+                        Reliance=analog.Reliance,
+                        ID = ++index
+                    });
+                _analogsList.AddRange(analogs);
+            }
+        }
+
         private void Find(string original, string toFind, int steps)
         {
+            FillAnalogsList();
             _goodsList = Repository.Goods.ToList();
             _producerList = Repository.Producers.ToList();
             _originalGoods = GetGoodsByFindLinkString(original); //находим исходный товар
@@ -91,7 +111,7 @@ namespace TP151_API.Utils
             _errorMessage = "Исходный или искомый товар не найден."; //устанавливается такая обшибка сразу, чтобы не обрабатывать случай, когда один из товаров не найден
             if (_originalGoods != null && _toFindGoods != null)
             {//если товары найдены, ищем между ними маршрут
-                Analog first = Repository.Analogs.FirstOrDefault(x => x.OriginalGoodslD == _originalGoods.ID); //находим первый аналог
+                Analog first = _analogsList.FirstOrDefault(x => x.OriginalGoodslD == _originalGoods.ID); //находим первый аналог
                 if (first != null)
                 { //если он есть, начинаем искать
                     _fis = new List<FindIteration>() //список для запоминания группы аналогов на каждом шаге
@@ -134,7 +154,7 @@ namespace TP151_API.Utils
         {//ищем аналоги по переданному списку аналогов
             List<Analog> newAnalogs = new List<Analog>();
             foreach (var analog in analogs.Where(x => x.Reliance))
-                newAnalogs.AddRange(Repository.Analogs.Where(x => x.OriginalGoodslD == analog.AnalogGoodsID).ToList());
+                newAnalogs.AddRange(_analogsList.Where(x => x.OriginalGoodslD == analog.AnalogGoodsID).ToList());
             return newAnalogs;
         }
 
@@ -160,6 +180,7 @@ namespace TP151_API.Utils
             foreach (var fi in _fis)
             {
                 var current = GetLinkAnalog(fi.Analogs, goodsID);
+                if (current.AnalogGoodsID == _originalGoods.ID) break;
                 _links.Add(GetLinkData(current, fi.Step));
                 goodsID = current.OriginalGoodslD;
             }
