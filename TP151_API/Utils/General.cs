@@ -35,7 +35,7 @@ namespace TP151_API.Utils
         /// </summary>
         /// <param name="vendorCode"></param>
         /// <returns></returns>
-        public static string ClearVendorCode(string vendorCode)
+        public static string ClearFindLinkString(string vendorCode)
         {
             string newVendorCode = "";
             foreach (var ch in vendorCode.ToLower())

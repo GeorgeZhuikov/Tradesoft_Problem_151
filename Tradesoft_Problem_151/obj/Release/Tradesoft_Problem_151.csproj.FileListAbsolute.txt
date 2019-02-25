@@ -24,3 +24,6 @@ C:\Repos\Tradesoft_Problem_151\Tradesoft_Problem_151\obj\Release\Tradesoft_Probl
 C:\Repos\Tradesoft_Problem_151\Tradesoft_Problem_151\obj\Release\Tradesoft_Problem_151.csproj.GenerateResource.Cache
 C:\Repos\Tradesoft_Problem_151\Tradesoft_Problem_151\obj\Release\Tradesoft_Problem_151.exe
 C:\Repos\Tradesoft_Problem_151\Tradesoft_Problem_151\obj\Release\Tradesoft_Problem_151.pdb
+C:\Repos\Tradesoft_Problem_151_GitHub\Tradesoft_Problem_151\bin\Release\Tradesoft_Problem_151.exe.config
+C:\Repos\Tradesoft_Problem_151_GitHub\Tradesoft_Problem_151\obj\Release\Tradesoft_Problem_151.exe
+C:\Repos\Tradesoft_Problem_151_GitHub\Tradesoft_Problem_151\obj\Release\Tradesoft_Problem_151.pdb

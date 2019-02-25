@@ -15,7 +15,9 @@ namespace TP151_API.Utils
         private List<FindIteration> _fis; //информация о циклах поиска
         private List<LinkData> _links; //информация о маршрутах и их содержимого
         private Good _originalGoods, _toFindGoods; //имходный и искомый товары
+        private Producer _originalProducer, _toFindProducer; //имходный и искомый производители
         private List<Good> _goodsList; //список товаров
+        private List<Producer> _producerList; //список производителей
         private string _errorMessage; //сообзение об ощибке
 
         public string ErrorMessage
@@ -58,18 +60,32 @@ namespace TP151_API.Utils
         }
 
         public FindLinks(string original, string toFind, int steps)
-        {//обрабатываем строки артикулов
-            original = General.ClearVendorCode(original);
-            toFind = General.ClearVendorCode(toFind);
+        {//обрабатываем строки поиска связей
             Find(original, toFind, steps); //ищим аналоги
             if (_result) ProceedResult(); //если маршрут найлен, то обрабатываем результат
+        }
+
+        private Good GetGoodsByFindLinkString(string str)
+        {
+            Good goods = null;
+            var parts = str.Split('/');
+            if (parts.Length > 1) //если строка состоит из двух частей, то продолжаем поиск
+            {
+                string vendorCode = General.ClearFindLinkString(parts[0]);
+                string producerName = General.ClearFindLinkString(parts[1]);
+                var producer = _producerList.FirstOrDefault(x => General.ClearFindLinkString(x.Name).StartsWith(producerName));
+                if (producer != null)
+                    goods = _goodsList.Where(x => x.ProducerID == producer.ID).FirstOrDefault(x => General.ClearFindLinkString(x.VendorCode).StartsWith(vendorCode));
+            }
+            return goods;
         }
 
         private void Find(string original, string toFind, int steps)
         {
             _goodsList = Repository.Goods.ToList();
-            _originalGoods = _goodsList.FirstOrDefault(x => General.ClearVendorCode(x.VendorCode).StartsWith(original)); //находим исходный товар из списка
-            _toFindGoods = _goodsList.FirstOrDefault(x => General.ClearVendorCode(x.VendorCode).StartsWith(toFind)); //находим искомый товар из списка
+            _producerList = Repository.Producers.ToList();
+            _originalGoods = GetGoodsByFindLinkString(original); //находим исходный товар
+            _toFindGoods = GetGoodsByFindLinkString(toFind); //находим искомый товар 
             int currentStep = 0; //устанавливаем начальные праметры
             _result = false;
             _errorMessage = "Исходный или искомый товар не найден."; //устанавливается такая обшибка сразу, чтобы не обрабатывать случай, когда один из товаров не найден

@@ -4,3 +4,9 @@ C:\Repos\Tradesoft_Problem_151\TP151_Repository\bin\Debug\TP151_Repository.pdb
 C:\Repos\Tradesoft_Problem_151\TP151_Repository\obj\Debug\TP151_Repository.dll
 C:\Repos\Tradesoft_Problem_151\TP151_Repository\obj\Debug\TP151_Repository.pdb
 C:\Repos\Tradesoft_Problem_151\TP151_Repository\obj\Debug\TP151_Repository.csprojResolveAssemblyReference.cache
+C:\Repos\Tradesoft_Problem_151_GitHub\TP151_Repository\bin\Debug\TP151_Repository.dll.config
+C:\Repos\Tradesoft_Problem_151_GitHub\TP151_Repository\bin\Debug\TP151_Repository.dll
+C:\Repos\Tradesoft_Problem_151_GitHub\TP151_Repository\bin\Debug\TP151_Repository.pdb
+C:\Repos\Tradesoft_Problem_151_GitHub\TP151_Repository\obj\Debug\TP151_Repository.csprojResolveAssemblyReference.cache
+C:\Repos\Tradesoft_Problem_151_GitHub\TP151_Repository\obj\Debug\TP151_Repository.dll
+C:\Repos\Tradesoft_Problem_151_GitHub\TP151_Repository\obj\Debug\TP151_Repository.pdb
